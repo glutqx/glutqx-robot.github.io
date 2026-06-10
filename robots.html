@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兵种图鉴 | 群星战队 RoboMaster</title>
+    <style>
+        * { margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif; }
+        body { background:#081020; color:#f0f4ff; line-height:1.7; }
+        header { background:rgba(10,20,40,0.95); padding:18px 5%; display:flex; justify-content:center; align-items:center; position:sticky; top:0; z-index:99; border-bottom:1px solid #1f3a66; }
+        nav a { color:#e0e9ff; text-decoration:none; margin:0 12px; font-size:1.1rem; padding:8px 14px; border-radius:8px; transition:0.3s; }
+        nav a:hover, nav a.active { background:rgba(79,195,247,0.2); color:#4fc3f7; }
+        .banner { padding:60px 5%; background:linear-gradient(160deg,#0b1a38 0%,#081020 100%); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+        .banner-text h1 { font-size:3rem; color:#fff; }
+        .banner-text p { color:#b0c4de; margin-top:15px; max-width:500px; }
+        .banner-img { width:300px; height:300px; background:url('assets/robot-01.png') center/contain no-repeat; }
+        .section-title { text-align:center; font-size:2.2rem; margin:50px 0; color:#fff; }
+        .robot-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:25px; max-width:1100px; margin:0 auto 80px; padding:0 5%; }
+        .robot-card { background:rgba(30,50,90,0.4); border-radius:10px; overflow:hidden; border:1px solid #243b63; cursor:pointer; transition:transform 0.3s; }
+        .robot-card:hover { transform:translateY(-5px); }
+        .robot-img { height:180px; position:relative; }
+        .robot-card:nth-child(1) .robot-img {background:url('assets/robot-01.png') center/cover no-repeat;}
+        .robot-card:nth-child(2) .robot-img {background:url('assets/robot-02.png') center/cover no-repeat;}
+        .robot-card:nth-child(3) .robot-img {background:url('assets/robot-03.png') center/cover no-repeat;}
+        .robot-card:nth-child(4) .robot-img {background:url('assets/robot-04.png') center/cover no-repeat;}
+        .robot-card:nth-child(5) .robot-img {background:url('assets/robot-05.png') center/cover no-repeat;}
+        .robot-card:nth-child(6) .robot-img {background:url('assets/robot-06.png') center/cover no-repeat;}
+        .robot-card:nth-child(7) .robot-img {background:url('assets/robot-07.png') center/cover no-repeat;}
+        .num-tag { position:absolute; top:15px; left:15px; background:#ffb74d; color:#000; font-weight:bold; padding:5px 12px; border-radius:4px; }
+        .robot-content { padding:20px; }
+        .role { color:#4fc3f7; font-size:0.9rem; margin-bottom:5px; }
+        .robot-content h3 { font-size:1.4rem; margin-bottom:12px; }
+        .robot-content p { color:#b0c4de; font-size:0.95rem; margin-bottom:15px; }
+        .tags-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:15px; }
+        .tag-yellow { background:rgba(255,183,77,0.2); color:#ffb74d; padding:4px 10px; border-radius:4px; font-size:0.85rem; }
+        .btn-detail { background:rgba(255,255,255,0.1); color:#fff; border:none; padding:8px 18px; border-radius:6px; cursor:pointer; transition:0.3s; }
+        .btn-detail:hover { background:rgba(79,195,247,0.3); }
+        footer { background:#050c1a; text-align:center; padding:35px 20px; color:#7a8cb3; border-top:1px solid #1f3a66; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="index.html#team">战队</a>
+            <a href="#" class="active">兵种图鉴</a>
+            <a href="index.html#teamwork">五大分工</a>
+            <a href="index.html#media">媒体</a>
+            <a href="index.html#honor">荣誉</a>
+            <a href="index.html#contact">联系</a>
+        </nav>
+    </header>
+
+    <div class="banner">
+        <div class="banner-text">
+            <p style="color:#4fc3f7;text-transform:uppercase;font-size:0.9rem;">ROBOMASTER ROBOTS</p>
+            <h1>七大兵种功能图鉴</h1>
+            <p>完整 RoboMaster 赛场兵种体系，包含地面、空中、远程、侦查全类型单位，各司其职组成完整战术体系。</p>
+        </div>
+        <div class="banner-img"></div>
+    </div>
+
+    <h2 class="section-title">全部兵种列表</h2>
+    <div class="robot-grid">
+        <div class="robot-card" onclick="location.href='hero.html'">
+            <div class="robot-img"><div class="num-tag">01</div></div>
+            <div class="robot-content">
+                <p class="role">重火力核心</p>
+                <h3>英雄机器人</h3>
+                <p>全场主力输出，高伤害、高优先级目标。</p>
+                <div class="tags-row"><span class="tag-yellow">主力输出</span></div>
+                <button class="btn-detail">查看详情</button>
+            </div>
+        </div>
+        <div class="robot-card" onclick="location.href='engineer.html'">
+            <div class="robot-img"><div class="num-tag">02</div></div>
+            <div class="robot-content">
+                <p class="role">资源后勤</p>
+                <h3>工程机器人</h3>
+                <p>采集矿石、交互场地机关，团队经济命脉。</p>
+                <div class="tags-row"><span class="tag-yellow">资源采集</span></div>
+                <button class="btn-detail">查看详情</button>
+            </div>
+        </div>
+        <div class="robot-card" onclick="location.href='infantry.html'">
+            <div class="robot-img"><div class="num-tag">03</div></div>
+            <div class="robot-content">
+                <p class="role">地面机动主力</p>
+                <h3>步兵机器人</h3>
+                <p>数量多、机动灵活，负责推进、拉扯、掩护。</p>
+                <div class="tags-row"><span class="tag-yellow">机动作战</span></div>
+                <button class="btn-detail">查看详情</button>
+            </div>
+        </div>
+        <div class="robot-card" onclick="location.href='sentry.html'">
+            <div class="robot-img"><div class="num-tag">04</div></div>
+            <div class="robot-content">
+                <p class="role">自动防御单位</p>
+                <h3>哨兵机器人</h3>
+                <p>全自动巡逻防守，无需人为操控。</p>
+                <div class="tags-row"><span class="tag-yellow">自主防守</span></div>
+                <button class="btn-detail">查看详情</button>
+            </div>
+        </div>
+        <div class="robot-card" onclick="location.href='aerial.html'">
+            <div class="robot-img"><div class="num-tag">05</div></div>
+            <div class="robot-content">
+                <p class="role">空中作战单位</p>
+                <h3>空中机器人</h3>
+                <p>高空侦查、空中打击，克制地面单位。</p>
+                <div class="tags-row"><span class="tag-yellow">空中突袭</span></div>
+                <button class="btn-detail">查看详情</button>
+            </div>
+        </div>
+        <div class="robot-card" onclick="location.href='dart.html'">
+            <div class="robot-img"><div class="num-tag">06</div></div>
+            <div class="robot-content">
+                <p class="role">远程狙击系统</p>
+                <h3>飞镖系统</h3>
+                <p>超远射程定点打击，远距离压制。</p>
+                <div class="tags-row"><span class="tag-yellow">远程打击</span></div>
+                <button class="btn-detail">查看详情</button>
+            </div>
+        </div>
+        <div class="robot-card" onclick="location.href='radar.html'">
+            <div class="robot-img"><div class="num-tag">07</div></div>
+            <div class="robot-content">
+                <p class="role">全场侦查系统</p>
+                <h3>雷达系统</h3>
+                <p>探测敌方位置，提供全场视野情报。</p>
+                <div class="tags-row"><span class="tag-yellow">视野侦查</span></div>
+                <button class="btn-detail">查看详情</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 群星战队 | 桂林理工大学机器人实践基地</p>
+    </footer>
+</body>
+</html>
