@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英雄机器人 | 兵种详情</title>
+    <style>
+        * { margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif; }
+        body { background:#081020; color:#f0f4ff; line-height:1.7; }
+        header { background:rgba(10,20,40,0.95); padding:18px 5%; display:flex; justify-content:center; align-items:center; position:sticky; top:0; z-index:99; border-bottom:1px solid #1f3a66; }
+        nav a { color:#e0e9ff; text-decoration:none; margin:0 12px; font-size:1.1rem; padding:8px 14px; border-radius:8px; transition:0.3s; }
+        nav a:hover, nav a.active { background:rgba(79,195,247,0.2); color:#4fc3f7; }
+        .container { max-width:1200px; margin:80px auto; padding:0 5%; display:flex; gap:50px; flex-wrap:wrap; align-items:center; }
+        .robot-img { flex:1; min-width:300px; height:400px; background:url('assets/robot-01.png') center/contain no-repeat; border:1px solid #243b63; border-radius:12px; }
+        .robot-info { flex:1; min-width:300px; }
+        .role-tag { color:#4fc3f7; font-size:1rem; margin-bottom:10px; }
+        .robot-info h1 { font-size:3rem; margin-bottom:20px; }
+        .desc { color:#b0c4de; font-size:1.1rem; margin-bottom:30px; }
+        .tags { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:30px; }
+        .tag { background:rgba(79,195,247,0.15); color:#4fc3f7; padding:8px 15px; border-radius:6px; }
+        .back-link { text-align:center; margin:40px 0; }
+        .back-link a { color:#4fc3f7; text-decoration:none; font-size:1.1rem; }
+        footer { background:#050c1a; text-align:center; padding:35px 20px; color:#7a8cb3; border-top:1px solid #1f3a66; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="index.html#team">战队</a>
+            <a href="robots.html" class="active">兵种图鉴</a>
+            <a href="index.html#teamwork">五大分工</a>
+            <a href="index.html#media">媒体</a>
+            <a href="index.html#honor">荣誉</a>
+            <a href="index.html#contact">联系</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="robot-img"></div>
+        <div class="robot-info">
+            <p class="role-tag">重火力核心单位</p>
+            <h1>英雄机器人</h1>
+            <p class="desc">RoboMaster 地面核心输出单位，搭载大弹丸发射机构，伤害能力全场顶尖，是队伍攻坚、击杀敌方主力的关键。承担正面交战、火力压制、定点收割等核心战术任务。</p>
+            <div class="tags">
+                <span class="tag">大弹丸发射</span>
+                <span class="tag">高血量</span>
+                <span class="tag">主力攻坚</span>
+                <span class="tag">战场核心</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="back-link">
+        <a href="robots.html">← 返回兵种图鉴</a>
+    </div>
+
+    <footer>
+        <p>© 2026 群星战队 | 桂林理工大学机器人实践基地</p>
+    </footer>
+</body>
+</html>
