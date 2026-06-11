@@ -5,44 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>空中机器人 | 兵种详情</title>
     <style>
-        * { margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft YaHei",sans-serif; }
-        body { background:#081020; color:#f0f4ff; line-height:1.7; }
-        header { background:rgba(10,20,40,0.95); padding:18px 5%; display:flex; justify-content:center; align-items:center; position:sticky; top:0; z-index:99; border-bottom:1px solid #1f3a66; }
-        nav a { color:#e0e9ff; text-decoration:none; margin:0 12px; font-size:1.1rem; padding:8px 14px; border-radius:8px; transition:0.3s; }
-        nav a:hover, nav a.active { background:rgba(79,195,247,0.2); color:#4fc3f7; }
-        .container { max-width:1200px; margin:80px auto; padding:0 5%; display:flex; gap:50px; flex-wrap:wrap; align-items:center; }
-        .robot-img { flex:1; min-width:300px; height:400px; background:url('assets/robot-05.png') center/contain no-repeat; border:1px solid #243b63; border-radius:12px; }
-        .robot-info { flex:1; min-width:300px; }
-        .role-tag { color:#4fc3f7; font-size:1rem; margin-bottom:10px; }
-        .robot-info h1 { font-size:3rem; margin-bottom:20px; }
-        .desc { color:#b0c4de; font-size:1.1rem; margin-bottom:30px; }
-        .tags { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:30px; }
-        .tag { background:rgba(79,195,247,0.15); color:#4fc3f7; padding:8px 15px; border-radius:6px; }
-        .back-link { text-align:center; margin:40px 0; }
-        .back-link a { color:#4fc3f7; text-decoration:none; font-size:1.1rem; }
-        footer { background:#050c1a; text-align:center; padding:35px 20px; color:#7a8cb3; border-top:1px solid #1f3a66; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", system-ui, sans-serif;
+        }
+        body {
+            background-color: #070707;
+            color: #f0f0f0;
+            line-height: 1.7;
+        }
+        header {
+            background-color: rgba(12, 12, 12, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 18px 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            border-bottom: 1px solid rgba(210, 30, 30, 0.25);
+        }
+        nav a {
+            color: #e5e5e5;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 1.1rem;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover,
+        nav a.active {
+            background-color: rgba(210, 30, 30, 0.18);
+            color: #e03636;
+            box-shadow: 0 0 10px rgba(210, 30, 30, 0.35);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 5%;
+            display: flex;
+            gap: 3rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .detail-img {
+            flex: 1;
+            min-width: 300px;
+            height: 400px;
+            border-radius: 12px;
+            background: url("无人机.png") center/cover no-repeat;
+            border: 1px solid rgba(210, 30, 30, 0.3);
+            box-shadow: 0 0 15px rgba(210, 30, 30, 0.2);
+        }
+        .detail-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .detail-sub {
+            color: #e03636;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        .detail-title {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+        .detail-desc {
+            color: #cccccc;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+        .tag {
+            background-color: rgba(210, 30, 30, 0.15);
+            color: #e03636;
+            padding: 8px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(210, 30, 30, 0.25);
+        }
+        .back-box {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .back-btn {
+            color: #e03636;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 25px;
+            border: 1px solid #e03636;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background-color: rgba(210, 30, 30, 0.15);
+        }
+        footer {
+            background-color: #101010;
+            padding: 35px 20px;
+            text-align: center;
+            color: #777;
+            border-top: 1px solid rgba(210, 30, 30, 0.25);
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
             <a href="index.html">首页</a>
-            <a href="index.html#team">战队</a>
+            <a href="index.html#team">战队介绍</a>
             <a href="robots.html" class="active">兵种图鉴</a>
-            <a href="index.html#teamwork">五大分工</a>
-            <a href="index.html#media">媒体</a>
-            <a href="index.html#honor">荣誉</a>
-            <a href="index.html#contact">联系</a>
+            <a href="members.html">五大分工</a>
+            <a href="index.html#media">媒体素材</a>
+            <a href="index.html#honor">赛事荣誉</a>
+            <a href="index.html#contact">联系我们</a>
         </nav>
     </header>
 
     <div class="container">
-        <div class="robot-img"></div>
-        <div class="robot-info">
-            <p class="role-tag">空中突击单位</p>
-            <h1>空中机器人</h1>
-            <p class="desc">无人机形态空中单位，可高空飞行、全域机动。兼具侦查与打击能力，能够从空中打击地面机器人，打乱敌方阵型，是战术突袭、高空压制的重要力量。</p>
-            <div class="tags">
+        <div class="detail-img"></div>
+        <div class="detail-text">
+            <p class="detail-sub">空中突击单位</p>
+            <h1 class="detail-title">空中机器人</h1>
+            <p class="detail-desc">无人机形态空中作战单位，可全域高空飞行。兼具侦查与打击能力，能够绕后突袭、压制地面机甲，是打破战场僵局的关键战术单位。</p>
+            <div class="tag-group">
                 <span class="tag">全域飞行</span>
                 <span class="tag">空中打击</span>
                 <span class="tag">高空侦查</span>
@@ -51,12 +146,12 @@
         </div>
     </div>
 
-    <div class="back-link">
-        <a href="robots.html">← 返回兵种图鉴</a>
+    <div class="back-box">
+        <a href="robots.html" class="back-btn">← 返回兵种图鉴</a>
     </div>
 
     <footer>
-        <p>© 2026 群星战队 | 桂林理工大学机器人实践基地</p>
+        <p>© 2026 群星战队 | 桂林理工大学机器人实践基地 版权所有</p>
     </footer>
 </body>
 </html>
