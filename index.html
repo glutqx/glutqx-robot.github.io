@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
@@ -18,6 +18,10 @@
             background-color: #070707;
             color: #f0f0f0;
             line-height: 1.7;
+        }
+
+        html {
+            scroll-padding-top: 80px;
         }
 
         /* 导航栏 - 毛玻璃样式 */
@@ -193,7 +197,7 @@
             border: 1px solid rgba(210, 30, 30, 0.25);
         }
 
-        /* 兵种卡片网格 */
+        /* 卡片网格 */
         .grid-layout {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -211,7 +215,7 @@
         }
         .item-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(210, 30, 0.5);
+            border-color: rgba(210, 30, 30, 0.5);
             box-shadow: 0 10px 25px rgba(210, 30, 30, 0.25);
         }
         .card-img {
@@ -299,7 +303,7 @@
             <div class="team-img"></div>
             <div class="team-text">
                 <h3>为机甲而生，为热爱而战</h3>
-                <p>群星战队是桂林理工大学专注 RoboMaster 机甲大师赛的科创战队，历经多届传承，划分机械、电控、算法、硬件、运营五大职能方向，全员协作研发参赛机器人。</p>
+                <p>群星战队是桂林理工大学专注 RoboMaster 机甲大师赛的科创战队，历经多届传承，分为机械、电控、算法、硬件、运营五大方向，全员协作完成参赛机器人的研发与调试。</p>
                 <div class="tag-group">
                     <span class="tag">机械结构</span>
                     <span class="tag">嵌入式电控</span>
@@ -323,7 +327,7 @@
                 <div class="card-body">
                     <p class="card-sub">重火力核心</p>
                     <h3 class="card-title">英雄机器人</h3>
-                    <p class="card-desc">全场主力输出，承担关键打击任务</p>
+                    <p class="card-desc">全场主力输出，承担攻坚作战任务</p>
                     <button class="card-btn">查看详情</button>
                 </div>
             </div>
@@ -332,7 +336,7 @@
                 <div class="card-body">
                     <p class="card-sub">资源保障</p>
                     <h3 class="card-title">工程机器人</h3>
-                    <p class="card-desc">采集矿石，团队后勤核心</p>
+                    <p class="card-desc">采集矿石，团队后勤核心单位</p>
                     <button class="card-btn">查看详情</button>
                 </div>
             </div>
@@ -341,16 +345,16 @@
                 <div class="card-body">
                     <p class="card-sub">机动主力</p>
                     <h3 class="card-title">步兵机器人</h3>
-                    <p class="card-desc">灵活作战，负责阵地推进</p>
+                    <p class="card-desc">灵活作战，负责阵地推进与袭扰</p>
                     <button class="card-btn">查看详情</button>
                 </div>
             </div>
             <div class="item-card robot-card" onclick="location.href='sentry.html'">
                 <div class="card-img"></div>
                 <div class="card-body">
-                    <p class="card-sub">自动防守</p>
+                    <p class="card-sub">自动防御</p>
                     <h3 class="card-title">哨兵机器人</h3>
-                    <p class="card-desc">全自动巡逻，守护基地</p>
+                    <p class="card-desc">全自动巡逻防守，守护基地安全</p>
                     <button class="card-btn">查看详情</button>
                 </div>
             </div>
@@ -359,7 +363,7 @@
                 <div class="card-body">
                     <p class="card-sub">空中突击</p>
                     <h3 class="card-title">空中机器人</h3>
-                    <p class="card-desc">高空侦查与空中打击</p>
+                    <p class="card-desc">高空侦查，实施空中战术打击</p>
                     <button class="card-btn">查看详情</button>
                 </div>
             </div>
@@ -368,7 +372,7 @@
                 <div class="card-body">
                     <p class="card-sub">远程狙击</p>
                     <h3 class="card-title">飞镖系统</h3>
-                    <p class="card-desc">超远射程定点打击</p>
+                    <p class="card-desc">超远射程，定点压制敌方单位</p>
                     <button class="card-btn">查看详情</button>
                 </div>
             </div>
@@ -377,14 +381,14 @@
                 <div class="card-body">
                     <p class="card-sub">视野侦查</p>
                     <h3 class="card-title">雷达系统</h3>
-                    <p class="card-desc">全场探测，提供情报</p>
+                    <p class="card-desc">全场探测，实时提供战场情报</p>
                     <button class="card-btn">查看详情</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 五大分工 -->
+    <!-- 团队分工预览 -->
     <section id="teamwork">
         <div class="section-head">
             <h2 class="section-title">五大职能分工</h2>
@@ -394,17 +398,17 @@
             <div class="item-card" onclick="location.href='members.html#mechanical'">
                 <div class="card-body">
                     <h3 class="card-title">机械组</h3>
-                    <p class="card-desc">整机结构、传动、云台设计与装配调试</p>
+                    <p class="card-desc">结构设计、传动机构、装配与机械调试</p>
                     <div class="tag-group">
                         <span class="tag">结构设计</span>
-                        <span class="tag">加工装配</span>
+                        <span class="tag">装配调试</span>
                     </div>
                 </div>
             </div>
             <div class="item-card" onclick="location.href='members.html#control'">
                 <div class="card-body">
                     <h3 class="card-title">电控组</h3>
-                    <p class="card-desc">嵌入式开发、运动控制、整机调试</p>
+                    <p class="card-desc">嵌入式开发、运动控制、设备通信调试</p>
                     <div class="tag-group">
                         <span class="tag">嵌入式</span>
                         <span class="tag">运动控制</span>
@@ -414,27 +418,27 @@
             <div class="item-card" onclick="location.href='members.html#algorithm'">
                 <div class="card-body">
                     <h3 class="card-title">算法组</h3>
-                    <p class="card-desc">机器视觉、目标识别、自动瞄准</p>
+                    <p class="card-desc">视觉识别、目标追踪、自动瞄准算法</p>
                     <div class="tag-group">
                         <span class="tag">视觉识别</span>
-                        <span class="tag">智能决策</span>
+                        <span class="tag">智能算法</span>
                     </div>
                 </div>
             </div>
             <div class="item-card" onclick="location.href='members.html#hardware'">
                 <div class="card-body">
                     <h3 class="card-title">硬件组</h3>
-                    <p class="card-desc">电路设计、PCB、供电与线束调试</p>
+                    <p class="card-desc">电路设计、PCB绘制、硬件焊接检修</p>
                     <div class="tag-group">
                         <span class="tag">电路设计</span>
-                        <span class="tag">硬件排查</span>
+                        <span class="tag">故障排查</span>
                     </div>
                 </div>
             </div>
             <div class="item-card" onclick="location.href='members.html#operation'">
                 <div class="card-body">
                     <h3 class="card-title">运营组</h3>
-                    <p class="card-desc">赛事对接、宣传、招新、资料整理</p>
+                    <p class="card-desc">赛事对接、宣传招新、后勤统筹管理</p>
                     <div class="tag-group">
                         <span class="tag">赛事运营</span>
                         <span class="tag">宣传策划</span>
@@ -444,21 +448,19 @@
         </div>
     </section>
 
-    <!-- 媒体素材（预留扩展区） -->
+    <!-- 媒体素材 预留区域 -->
     <section id="media">
         <div class="section-head">
             <h2 class="section-title">媒体素材</h2>
             <a href="#" class="more-link">更多内容 →</a>
         </div>
-        <!-- 此处后续可直接新增图片/视频卡片 -->
     </section>
 
-    <!-- 赛事荣誉（预留扩展区） -->
+    <!-- 赛事荣誉 预留区域 -->
     <section id="honor">
         <div class="section-head">
             <h2 class="section-title">赛事荣誉</h2>
         </div>
-        <!-- 此处后续可新增荣誉列表 -->
     </section>
 
     <!-- 联系我们 -->
@@ -468,8 +470,8 @@
         </div>
         <div class="team-card">
             <div class="team-text">
-                <h3>欢迎加入与交流</h3>
-                <p>如果你热爱机器人、机甲竞技，无论有无基础，都欢迎咨询、加入我们。</p>
+                <h3>欢迎交流与加入</h3>
+                <p>热爱机甲、机器人技术，无论有无基础，都欢迎前来咨询交流。</p>
                 <div class="tag-group">
                     <span class="tag">招新咨询</span>
                     <span class="tag">校际合作</span>
@@ -483,13 +485,16 @@
         <p>© 2026 群星战队 | 桂林理工大学机器人实践基地 版权所有</p>
     </footer>
 
+    <!-- 修复后的平滑滚动JS -->
     <script>
-        // 页面内平滑滚动
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('#'));
-                if(target) target.scrollIntoView({ behavior: 'smooth' });
+                const targetId = this.getAttribute('href');
+                const targetEle = document.querySelector(targetId);
+                if(targetEle){
+                    targetEle.scrollIntoView({ behavior: 'smooth' });
+                }
             });
         });
     </script>
