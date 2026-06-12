@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>团队分工 & 历届成员 | 群星战队</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", system-ui, sans-serif;
+        }
+        body {
+            background-color: #070707;
+            color: #f0f0f0;
+            line-height: 1.7;
+        }
+        html {
+            scroll-padding-top: 80px;
+        }
+        /* 导航栏 */
+        header {
+            background-color: rgba(12, 12, 12, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 18px 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            border-bottom: 1px solid rgba(210, 30, 30, 0.25);
+        }
+        nav a {
+            color: #e5e5e5;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 1.1rem;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover,
+        nav a.active {
+            background-color: rgba(210, 30, 30, 0.18);
+            color: #e03636;
+            box-shadow: 0 0 10px rgba(210, 30, 30, 0.35);
+        }
+        /* 页面头部横幅 */
+        .page-banner {
+            padding: 60px 5%;
+            text-align: center;
+        }
+        .page-banner h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 0 0 15px rgba(210, 30, 30, 0.4);
+            margin-bottom: 1rem;
+        }
+        .page-banner p {
+            color: #cccccc;
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* 通用板块 */
+        section {
+            padding: 60px 5%;
+        }
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            color: #fff;
+            position: relative;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60px;
+            height: 3px;
+            background-color: #e03636;
+            box-shadow: 0 0 8px rgba(210, 30, 30, 0.5);
+        }
+        /* 网格布局 */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        /* 分工卡片 */
+        .job-card {
+            background-color: rgba(18, 18, 18, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(210, 30, 30, 0.25);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        .job-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(210, 30, 30, 0.5);
+            box-shadow: 0 10px 25px rgba(210, 30, 30, 0.25);
+        }
+        .job-card h3 {
+            font-size: 1.6rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .job-card p {
+            color: #cccccc;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+        }
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+        .tag {
+            background-color: rgba(210, 30, 30, 0.15);
+            color: #e03636;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid rgba(210, 30, 30, 0.25);
+        }
+        /* 成员卡片 */
+        .member-card {
+            background-color: rgba(18, 18, 18, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(210, 30, 30, 0.25);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(210, 30, 30, 0.5);
+            box-shadow: 0 8px 20px rgba(210, 30, 30, 0.25);
+        }
+        .member-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            background-color: #222;
+            border: 2px solid rgba(210, 30, 30, 0.3);
+        }
+        .member-name {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        .member-post {
+            color: #e03636;
+            font-size: 0.95rem;
+            margin-bottom: 10px;
+        }
+        .member-desc {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        /* 返回按钮区域 */
+        .back-box {
+            text-align: center;
+            margin: 50px 0 20px;
+        }
+        .back-btn {
+            color: #e03636;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 10px 25px;
+            border: 1px solid #e03636;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background-color: rgba(210, 30, 30, 0.15);
+        }
+        /* 页脚 */
+        footer {
+            background-color: #101010;
+            padding: 35px 20px;
+            text-align: center;
+            color: #777;
+            border-top: 1px solid rgba(210, 30, 30, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">首页</a>
+            <a href="index.html#team">战队介绍</a>
+            <a href="robots.html">兵种图鉴</a>
+            <a href="#" class="active">五大分工</a>
+            <a href="index.html#media">媒体素材</a>
+            <a href="index.html#honor">赛事荣誉</a>
+            <a href="index.html#contact">联系我们</a>
+        </nav>
+    </header>
+
+    <div class="page-banner">
+        <h1>团队职能分工 & 历届成员</h1>
+        <p>各司其职，协同作战，每一位成员都是战队不可或缺的力量</p>
+    </div>
+
+    <!-- 五大职能分工 -->
+    <section id="mechanical">
+        <div class="section-head">
+            <h2 class="section-title">五大职能分工</h2>
+        </div>
+        <div class="grid-layout">
+            <div class="job-card">
+                <h3>机械组</h3>
+                <p>负责整台机器人结构设计、零部件选型、三维建模、加工装配与机械调试，打造稳定可靠的机甲本体与运动机构。</p>
+                <div class="tag-group">
+                    <span class="tag">三维建模</span>
+                    <span class="tag">结构设计</span>
+                    <span class="tag">加工装配</span>
+                    <span class="tag">机械调试</span>
+                </div>
+            </div>
+
+            <div class="job-card" id="control">
+                <h3>电控组</h3>
+                <p>嵌入式程序开发、底盘运动控制、云台控制、设备通信与整机逻辑调试，为机器人赋予行动能力。</p>
+                <div class="tag-group">
+                    <span class="tag">嵌入式开发</span>
+                    <span class="tag">运动控制</span>
+                    <span class="tag">串口通信</span>
+                    <span class="tag">程序调试</span>
+                </div>
+            </div>
+
+            <div class="job-card" id="algorithm">
+                <h3>算法组</h3>
+                <p>机器视觉、图像识别、目标检测、自动瞄准与智能决策算法开发，实现机器人自主作战能力。</p>
+                <div class="tag-group">
+                    <span class="tag">视觉识别</span>
+                    <span class="tag">目标追踪</span>
+                    <span class="tag">自动瞄准</span>
+                    <span class="tag">智能算法</span>
+                </div>
+            </div>
+
+            <div class="job-card" id="hardware">
+                <h3>硬件组</h3>
+                <p>电路原理图设计、PCB绘制、电源系统、线束排布、硬件焊接与电路故障排查，保障电路稳定运行。</p>
+                <div class="tag-group">
+                    <span class="tag">电路设计</span>
+                    <span class="tag">PCB绘制</span>
+                    <span class="tag">硬件焊接</span>
+                    <span class="tag">故障检修</span>
+                </div>
+            </div>
+
+            <div class="job-card" id="operation">
+                <h3>运营组</h3>
+                <p>赛事对接、对外宣传、招新策划、文案制作、资料整理、后勤保障与团队日常管理。</p>
+                <div class="tag-group">
+                    <span class="tag">赛事运营</span>
+                    <span class="tag">宣传策划</span>
+                    <span class="tag">招新管理</span>
+                    <span class="tag">后勤统筹</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 历届成员 -->
+    <section>
+        <div class="section-head">
+            <h2 class="section-title">历届核心成员</h2>
+        </div>
+        <div class="grid-layout">
+            <div class="member-card">
+                <div class="member-avatar"></div>
+                <h4 class="member-name">成员姓名</h4>
+                <div class="member-post">战队队长 / 机械负责人</div>
+                <p class="member-desc">带队统筹整体项目，主导整机结构设计与优化</p>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar"></div>
+                <h4 class="member-name">成员姓名</h4>
+                <div class="member-post">电控组负责人</div>
+                <p class="member-desc">负责嵌入式开发、整机运动控制与程序维护</p>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar"></div>
+                <h4 class="member-name">成员姓名</h4>
+                <div class="member-post">算法组负责人</div>
+                <p class="member-desc">专注机器视觉、目标识别与自动瞄准算法</p>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar"></div>
+                <h4 class="member-name">成员姓名</h4>
+                <div class="member-post">硬件组成员</div>
+                <p class="member-desc">电路设计、PCB制作与硬件故障排查</p>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar"></div>
+                <h4 class="member-name">成员姓名</h4>
+                <div class="member-post">运营组成员</div>
+                <p class="member-desc">赛事宣传、招新及团队后勤管理工作</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="back-box">
+        <a href="index.html" class="back-btn">← 返回首页</a>
+    </div>
+
+    <footer>
+        <p>© 2026 群星战队 | 桂林理工大学机器人实践基地 版权所有</p>
+    </footer>
+</body>
+</html>
