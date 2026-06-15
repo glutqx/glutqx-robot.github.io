@@ -3,155 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>哨兵机器人 | 兵种详情</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Microsoft YaHei", system-ui, sans-serif;
-        }
-        body {
-            background-color: #070707;
-            color: #f0f0f0;
-            line-height: 1.7;
-        }
-        header {
-            background-color: rgba(12, 12, 12, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: 18px 5%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            border-bottom: 1px solid rgba(210, 30, 30, 0.25);
-        }
-        nav a {
-            color: #e5e5e5;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 1.1rem;
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        nav a:hover,
-        nav a.active {
-            background-color: rgba(210, 30, 30, 0.18);
-            color: #e03636;
-            box-shadow: 0 0 10px rgba(210, 30, 30, 0.35);
-        }
-        .container {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 5%;
-            display: flex;
-            gap: 3rem;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        .detail-img {
-            flex: 1;
-            min-width: 300px;
-            height: 400px;
-            border-radius: 12px;
-            background: url("哨兵.png") center/cover no-repeat;
-            border: 1px solid rgba(210, 30, 30, 0.3);
-            box-shadow: 0 0 15px rgba(210, 30, 30, 0.2);
-        }
-        .detail-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        .detail-sub {
-            color: #e03636;
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-        .detail-title {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: #fff;
-        }
-        .detail-desc {
-            color: #cccccc;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-        .tag-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-        .tag {
-            background-color: rgba(210, 30, 30, 0.15);
-            color: #e03636;
-            padding: 8px 16px;
-            border-radius: 8px;
-            border: 1px solid rgba(210, 30, 30, 0.25);
-        }
-        .back-box {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .back-btn {
-            color: #e03636;
-            text-decoration: none;
-            font-size: 1.1rem;
-            padding: 10px 25px;
-            border: 1px solid #e03636;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-        .back-btn:hover {
-            background-color: rgba(210, 30, 30, 0.15);
-        }
-        footer {
-            background-color: #101010;
-            padding: 35px 20px;
-            text-align: center;
-            color: #777;
-            border-top: 1px solid rgba(210, 30, 30, 0.25);
-        }
-    </style>
+    <title>哨兵机器人 | 群星战队兵种</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">首页</a>
-            <a href="index.html#team">战队介绍</a>
-            <a href="robots.html" class="active">兵种图鉴</a>
-            <a href="members.html">五大分工</a>
-            <a href="index.html#media">媒体素材</a>
-            <a href="index.html#honor">赛事荣誉</a>
-            <a href="index.html#contact">联系我们</a>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="index.html#team">战队介绍</a>
+        <a href="robots.html" class="active">兵种图鉴</a>
+        <a href="members.html">五大分工</a>
+        <a href="index.html#media">媒体素材</a>
+        <a href="index.html#honor">赛事荣誉</a>
+        <a href="index.html#contact">联系我们</a>
+    </nav>
+</header>
 
-    <div class="container">
-        <div class="detail-img"></div>
-        <div class="detail-text">
-            <p class="detail-sub">全自动防御单位</p>
-            <h1 class="detail-title">哨兵机器人</h1>
-            <p class="detail-desc">固定在基地区域的自主防御机甲，搭载视觉识别与自动瞄准系统，全程无需人为操控。专门拦截入侵敌方单位，是基地第一道安全防线。</p>
+<div class="page-banner">
+    <h1>哨兵机器人</h1>
+    <p>全自动基地防御单位，无人自主巡逻作战</p>
+</div>
+
+<section>
+    <div class="common-card" style="display: flex; gap: 2.5rem; flex-wrap: wrap; align-items: center;">
+        <div style="width: 400px; height: 400px; border-radius: 12px; background: url(图片文件夹/哨兵.png) center/cover;"></div>
+        <div style="flex: 1; min-width: 300px;">
+            <h3 class="card-title">机型介绍</h3>
+            <p class="card-desc">哨兵机器人固定基地区域，全程无需人工操控，依靠视觉算法自动识别、追击入侵敌方单位，自动巡逻防守己方基地，算法组为核心开发组别，实现全自主作战逻辑。</p>
             <div class="tag-group">
-                <span class="tag">自主作战</span>
+                <span class="tag">全自动运行</span>
+                <span class="tag">自主巡逻</span>
                 <span class="tag">基地防守</span>
-                <span class="tag">自动瞄准</span>
-                <span class="tag">定点防御</span>
+                <span class="tag">纯视觉作战</span>
             </div>
         </div>
     </div>
+</section>
 
-    <div class="back-box">
-        <a href="robots.html" class="back-btn">← 返回兵种图鉴</a>
-    </div>
+<div class="back-box">
+    <a href="robots.html" class="back-btn">← 返回兵种图鉴</a>
+</div>
 
-    <footer>
-        <p>© 2026 群星战队 | 桂林理工大学机器人实践基地 版权所有</p>
-    </footer>
+<footer>
+    <p>© 2026 群星战队 | 桂林理工大学机器人实践基地 版权所有</p>
+</footer>
 </body>
 </html>
