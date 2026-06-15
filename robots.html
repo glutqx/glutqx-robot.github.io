@@ -3,220 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>兵种图鉴 | 群星战队</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Microsoft YaHei", system-ui, sans-serif;
-        }
-        body {
-            background-color: #070707;
-            color: #f0f0f0;
-            line-height: 1.7;
-        }
-        header {
-            background-color: rgba(12, 12, 12, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: 18px 5%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            border-bottom: 1px solid rgba(210, 30, 30, 0.25);
-        }
-        nav a {
-            color: #e5e5e5;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 1.1rem;
-            padding: 8px 16px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-        nav a:hover,
-        nav a.active {
-            background-color: rgba(210, 30, 30, 0.18);
-            color: #e03636;
-            box-shadow: 0 0 10px rgba(210, 30, 30, 0.35);
-        }
-        .page-banner {
-            padding: 60px 5%;
-            text-align: center;
-        }
-        .page-banner h1 {
-            font-size: 3rem;
-            color: #fff;
-            text-shadow: 0 0 15px rgba(210, 30, 30, 0.4);
-            margin-bottom: 1rem;
-        }
-        .page-banner p {
-            color: #cccccc;
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .grid-layout {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            padding: 0 5% 80px;
-        }
-        .item-card {
-            background-color: rgba(18, 18, 18, 0.75);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(210, 30, 30, 0.25);
-            border-radius: 16px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .item-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(210, 30, 0.5);
-            box-shadow: 0 10px 25px rgba(210, 30, 30, 0.25);
-        }
-        .card-img {
-            height: 200px;
-            position: relative;
-        }
-        .robot-card:nth-child(1) .card-img {background: url("英雄.png") center/cover no-repeat;}
-        .robot-card:nth-child(2) .card-img {background: url("工程.png") center/cover no-repeat;}
-        .robot-card:nth-child(3) .card-img {background: url("步兵.png") center/cover no-repeat;}
-        .robot-card:nth-child(4) .card-img {background: url("哨兵.png") center/cover no-repeat;}
-        .robot-card:nth-child(5) .card-img {background: url("无人机.png") center/cover no-repeat;}
-        .robot-card:nth-child(6) .card-img {background: url("飞镖.png") center/cover no-repeat;}
-        .robot-card:nth-child(7) .card-img {background: url("雷达正面.png") center/cover no-repeat;}
-        .card-body {
-            padding: 25px;
-        }
-        .card-sub {
-            color: #e03636;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-        }
-        .card-title {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            color: #fff;
-        }
-        .card-desc {
-            color: #cccccc;
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-        .card-btn {
-            background-color: rgba(210, 30, 30, 0.2);
-            color: #e03636;
-            border: none;
-            padding: 8px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .card-btn:hover {
-            background-color: rgba(210, 30, 30, 0.35);
-        }
-        footer {
-            background-color: #101010;
-            padding: 35px 20px;
-            text-align: center;
-            color: #777;
-            border-top: 1px solid rgba(210, 30, 30, 0.25);
-        }
-    </style>
+    <title>七大兵种图鉴 | 群星战队</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html">首页</a>
-            <a href="index.html#team">战队介绍</a>
-            <a href="#" class="active">兵种图鉴</a>
-            <a href="members.html">五大分工</a>
-            <a href="index.html#media">媒体素材</a>
-            <a href="index.html#honor">赛事荣誉</a>
-            <a href="index.html#contact">联系我们</a>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="index.html#team">战队介绍</a>
+        <a href="#" class="active">兵种图鉴</a>
+        <a href="members.html">五大分工</a>
+        <a href="index.html#media">媒体素材</a>
+        <a href="index.html#honor">赛事荣誉</a>
+        <a href="index.html#contact">联系我们</a>
+    </nav>
+</header>
 
-    <div class="page-banner">
-        <h1>RoboMaster 七大兵种图鉴</h1>
-        <p>覆盖地面、空中、远程、侦查全类型机甲，各司其职，组成完整赛场战术体系</p>
+<div class="page-banner">
+    <h1>七大兵种完整图鉴</h1>
+    <p>各型号机器人功能、定位与作战介绍</p>
+</div>
+
+<section>
+    <div class="section-head">
+        <h2 class="section-title">全部机器人单位</h2>
     </div>
-
     <div class="grid-layout">
-        <div class="item-card robot-card" onclick="location.href='hero.html'">
-            <div class="card-img"></div>
-            <div class="card-body">
-                <p class="card-sub">重火力核心</p>
-                <h3 class="card-title">英雄机器人</h3>
-                <p class="card-desc">全场主力输出，高伤害攻坚单位</p>
-                <button class="card-btn">查看详情</button>
-            </div>
+        <div class="common-card" onclick="location.href='hero.html'">
+            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/英雄.png) center/cover; margin: -30px -30px 20px;"></div>
+            <p style="color: #e03636;">重火力核心</p>
+            <h3 class="card-title">英雄机器人</h3>
+            <p class="card-desc">全场主力输出，承担攻坚作战任务</p>
+            <button class="btn-primary">查看详情</button>
         </div>
-        <div class="item-card robot-card" onclick="location.href='engineer.html'">
-            <div class="card-img"></div>
-            <div class="card-body">
-                <p class="card-sub">资源后勤</p>
-                <h3 class="card-title">工程机器人</h3>
-                <p class="card-desc">采集矿石，交互场地机关</p>
-                <button class="card-btn">查看详情</button>
-            </div>
+        <div class="common-card" onclick="location.href='engineer.html'">
+            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/工程.png) center/cover; margin: -30px -30px 20px;"></div>
+            <p style="color: #e03636;">资源保障</p>
+            <h3 class="card-title">工程机器人</h3>
+            <p class="card-desc">采集矿石，团队后勤核心单位</p>
+            <button class="btn-primary">查看详情</button>
         </div>
-        <div class="item-card robot-card" onclick="location.href='infantry.html'">
-            <div class="card-img"></div>
-            <div class="card-body">
-                <p class="card-sub">地面机动主力</p>
-                <h3 class="card-title">步兵机器人</h3>
-                <p class="card-desc">数量多、机动性强，负责推进拉扯</p>
-                <button class="card-btn">查看详情</button>
-            </div>
+        <div class="common-card" onclick="location.href='infantry.html'">
+            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/步兵.png) center/cover; margin: -30px -30px 20px;"></div>
+            <p style="color: #e03636;">机动主力</p>
+            <h3 class="card-title">步兵机器人</h3>
+            <p class="card-desc">灵活作战，负责阵地推进与袭扰</p>
+            <button class="btn-primary">查看详情</button>
         </div>
-        <div class="item-card robot-card" onclick="location.href='sentry.html'">
-            <div class="card-img"></div>
-            <div class="card-body">
-                <p class="card-sub">自动防御</p>
-                <h3 class="card-title">哨兵机器人</h3>
-                <p class="card-desc">全自动巡逻防守，守护基地要道</p>
-                <button class="card-btn">查看详情</button>
-            </div>
+        <div class="common-card" onclick="location.href='sentry.html'">
+            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/哨兵.png) center/cover; margin: -30px -30px 20px;"></div>
+            <p style="color: #e03636;">自动防御</p>
+            <h3 class="card-title">哨兵机器人</h3>
+            <p class="card-desc">全自动巡逻防守，守护基地安全</p>
+            <button class="btn-primary">查看详情</button>
         </div>
-        <div class="item-card robot-card" onclick="location.href='aerial.html'">
-            <div class="card-img"></div>
-            <div class="card-body">
-                <p class="card-sub">空中突击</p>
-                <h3 class="card-title">空中机器人</h3>
-                <p class="card-desc">高空侦查、空中打击单位</p>
-                <button class="card-btn">查看详情</button>
-            </div>
+        <div class="common-card" onclick="location.href='aerial.html'">
+            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/无人机.png) center/cover; margin: -30px -30px 20px;"></div>
+            <p style="color: #e03636;">空中突击</p>
+            <h3 class="card-title">空中机器人</h3>
+            <p class="card-desc">高空侦查，实施空中战术打击</p>
+            <button class="btn-primary">查看详情</button>
         </div>
-        <div class="item-card robot-card" onclick="location.href='dart.html'">
-            <div class="card-img"></div>
-            <div class="card-body">
-                <p class="card-sub">远程狙击</p>
-                <h3 class="card-title">飞镖系统</h3>
-                <p class="card-desc">超远射程，定点压制目标</p>
-                <button class="card-btn">查看详情</button>
-            </div>
+        <div class="common-card" onclick="location.href='dart.html'">
+            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/飞镖.png) center/cover; margin: -30px -30px 20px;"></div>
+            <p style="color: #e03636;">远程狙击</p>
+            <h3 class="card-title">飞镖系统</h3>
+            <p class="card-desc">超远射程，定点压制敌方单位</p>
+            <button class="btn-primary">查看详情</button>
         </div>
-        <div class="item-card robot-card" onclick="location.href='radar.html'">
-            <div class="card-img"></div>
-            <div class="card-body">
-                <p class="card-sub">视野侦查</p>
-                <h3 class="card-title">雷达系统</h3>
-                <p class="card-desc">全场探测，标记敌方位置</p>
-                <button class="card-btn">查看详情</button>
-            </div>
+        <div class="common-card" onclick="location.href='radar.html'">
+            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/雷达正面.png) center/cover; margin: -30px -30px 20px;"></div>
+            <p style="color: #e03636;">视野侦查</p>
+            <h3 class="card-title">雷达系统</h3>
+            <p class="card-desc">全场探测，实时提供战场情报</p>
+            <button class="btn-primary">查看详情</button>
         </div>
     </div>
+</section>
 
-    <footer>
-        <p>© 2026 群星战队 | 桂林理工大学机器人实践基地 版权所有</p>
-    </footer>
+<div class="back-box">
+    <a href="index.html" class="back-btn">← 返回首页</a>
+</div>
+
+<footer>
+    <p>© 2026 群星战队 | 桂林理工大学机器人实践基地 版权所有</p>
+</footer>
 </body>
 </html>
