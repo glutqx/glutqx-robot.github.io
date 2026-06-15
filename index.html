@@ -7,112 +7,112 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- 顶部导航 -->
 <header>
-    <nav>
-        <a href="#home" class="active">首页</a>
-        <a href="#team">战队介绍</a>
-        <a href="robots.html">兵种图鉴</a>
-        <a href="members.html">五大分工</a>
-        <a href="#media">媒体素材</a>
-        <a href="#honor">赛事荣誉</a>
-        <a href="#contact">联系我们</a>
-    </nav>
+    <a href="#home" class="active">首页</a>
+    <a href="#team">战队介绍</a>
+    <a href="#robot">兵种图鉴</a>
+    <a href="#teamwork">五大分工</a>
+    <a href="#media">媒体素材</a>
+    <a href="#honor">赛事荣誉</a>
+    <a href="#contact">联系我们</a>
 </header>
 
-<section id="home" style="min-height: 85vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem;">
-    <h1 style="font-size: 4rem; color: #fff; margin-bottom: 1rem;">群星战队</h1>
-    <p style="font-size: 1.4rem; color: #e03636; margin-bottom: 2.5rem;">桂林理工大学机器人实践基地 · RoboMaster 机甲大师赛</p>
-    <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-        <button class="btn-secondary" onclick="location.href='robots.html'">查看兵种图鉴</button>
-        <button class="btn-secondary" onclick="location.href='members.html'">查看团队分工</button>
+<!-- 首屏区域 -->
+<div class="hero-banner" id="home">
+    <h1>群星战队</h1>
+    <p>桂林理工大学机器人实践基地 · RoboMaster 机甲大师赛</p>
+    <div class="hero-btn-group">
+        <button class="btn-normal" onclick="location.href='robots.html'">查看兵种图鉴</button>
+        <button class="btn-normal" onclick="location.href='members.html'">查看团队分工</button>
     </div>
-</section>
+</div>
 
+<!-- 关于战队 -->
 <section id="team">
-    <div class="section-head">
+    <div class="section-title-row">
         <h2 class="section-title">关于战队</h2>
     </div>
-    <div class="common-card" style="display: flex; gap: 2.5rem; flex-wrap: wrap; align-items: center;">
-        <div style="width: 300px; height: 300px; border-radius: 12px; background: url(图片文件夹/战队图.png) center/cover;"></div>
-        <div style="flex: 1; min-width: 300px;">
-            <h3 class="card-title">为机甲而生，为热爱而战</h3>
-            <p class="card-desc">群星战队是桂林理工大学专注 RoboMaster 机甲大师赛的科创战队，历经多届传承，分为机械、电控、算法、硬件、运营五大方向，全员协作完成参赛机器人的研发与调试。</p>
-            <div class="tag-group">
-                <span class="tag">机械结构</span>
-                <span class="tag">嵌入式电控</span>
-                <span class="tag">视觉算法</span>
-                <span class="tag">硬件电路</span>
-                <span class="tag">赛事运营</span>
-            </div>
+    <div class="common-card">
+        <h3 class="card-title">为机甲而生，为热爱而战</h3>
+        <p class="card-desc">群星战队是桂林理工大学专注 RoboMaster 机甲大师赛的科创战队，历经多届传承，分为机械、电控、算法、硬件、运营五大方向，全员协作完成参赛机器人的研发与调试。</p>
+        <div class="tag-group">
+            <span class="tag">机械结构</span>
+            <span class="tag">嵌入式电控</span>
+            <span class="tag">视觉算法</span>
+            <span class="tag">硬件电路</span>
+            <span class="tag">赛事运营</span>
         </div>
     </div>
 </section>
 
+<!-- 七大兵种 -->
 <section id="robot">
-    <div class="section-head">
+    <div class="section-title-row">
         <h2 class="section-title">七大兵种</h2>
-        <a href="robots.html" class="more-link">查看完整图鉴 →</a>
+        <a href="robots.html" class="section-more">查看完整图鉴 →</a>
     </div>
-    <div class="grid-layout">
+    <div class="grid-7">
         <div class="common-card" onclick="location.href='hero.html'">
-            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/英雄.png) center/cover; margin: -30px -30px 20px;"></div>
-            <p style="color: #e03636;">重火力核心</p>
+            <div class="card-img-top" style="background-image: url(assets/英雄.png);"></div>
+            <p class="card-subtitle">重火力核心</p>
             <h3 class="card-title">英雄机器人</h3>
             <p class="card-desc">全场主力输出，承担攻坚作战任务</p>
-            <button class="btn-primary">查看详情</button>
+            <button class="btn-red">查看详情</button>
         </div>
         <div class="common-card" onclick="location.href='engineer.html'">
-            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/工程.png) center/cover; margin: -30px -30px 20px;"></div>
-            <p style="color: #e03636;">资源保障</p>
+            <div class="card-img-top" style="background-image: url(assets/工程.png);"></div>
+            <p class="card-subtitle">资源保障</p>
             <h3 class="card-title">工程机器人</h3>
             <p class="card-desc">采集矿石，团队后勤核心单位</p>
-            <button class="btn-primary">查看详情</button>
+            <button class="btn-red">查看详情</button>
         </div>
         <div class="common-card" onclick="location.href='infantry.html'">
-            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/步兵.png) center/cover; margin: -30px -30px 20px;"></div>
-            <p style="color: #e03636;">机动主力</p>
+            <div class="card-img-top" style="background-image: url(assets/步兵.png);"></div>
+            <p class="card-subtitle">机动主力</p>
             <h3 class="card-title">步兵机器人</h3>
             <p class="card-desc">灵活作战，负责阵地推进与袭扰</p>
-            <button class="btn-primary">查看详情</button>
+            <button class="btn-red">查看详情</button>
         </div>
         <div class="common-card" onclick="location.href='sentry.html'">
-            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/哨兵.png) center/cover; margin: -30px -30px 20px;"></div>
-            <p style="color: #e03636;">自动防御</p>
+            <div class="card-img-top" style="background-image: url(assets/哨兵.png);"></div>
+            <p class="card-subtitle">自动防御</p>
             <h3 class="card-title">哨兵机器人</h3>
             <p class="card-desc">全自动巡逻防守，守护基地安全</p>
-            <button class="btn-primary">查看详情</button>
+            <button class="btn-red">查看详情</button>
         </div>
         <div class="common-card" onclick="location.href='aerial.html'">
-            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/无人机.png) center/cover; margin: -30px -30px 20px;"></div>
-            <p style="color: #e03636;">空中突击</p>
+            <div class="card-img-top" style="background-image: url(assets/无人机.png);"></div>
+            <p class="card-subtitle">空中突击</p>
             <h3 class="card-title">空中机器人</h3>
             <p class="card-desc">高空侦查，实施空中战术打击</p>
-            <button class="btn-primary">查看详情</button>
+            <button class="btn-red">查看详情</button>
         </div>
         <div class="common-card" onclick="location.href='dart.html'">
-            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/飞镖.png) center/cover; margin: -30px -30px 20px;"></div>
-            <p style="color: #e03636;">远程狙击</p>
+            <div class="card-img-top" style="background-image: url(assets/飞镖.png);"></div>
+            <p class="card-subtitle">远程狙击</p>
             <h3 class="card-title">飞镖系统</h3>
             <p class="card-desc">超远射程，定点压制敌方单位</p>
-            <button class="btn-primary">查看详情</button>
+            <button class="btn-red">查看详情</button>
         </div>
         <div class="common-card" onclick="location.href='radar.html'">
-            <div style="height: 200px; border-radius: 12px 12px 0 0; background: url(图片文件夹/雷达正面.png) center/cover; margin: -30px -30px 20px;"></div>
-            <p style="color: #e03636;">视野侦查</p>
+            <div class="card-img-top" style="background-image: url(assets/雷达正面.png);"></div>
+            <p class="card-subtitle">视野侦查</p>
             <h3 class="card-title">雷达系统</h3>
             <p class="card-desc">全场探测，实时提供战场情报</p>
-            <button class="btn-primary">查看详情</button>
+            <button class="btn-red">查看详情</button>
         </div>
     </div>
 </section>
 
+<!-- 五大职能分工 -->
 <section id="teamwork">
-    <div class="section-head">
+    <div class="section-title-row">
         <h2 class="section-title">五大职能分工</h2>
-        <a href="members.html" class="more-link">查看历届成员 →</a>
+        <a href="members.html" class="section-more">查看历届成员 →</a>
     </div>
-    <div class="grid-layout">
-        <div class="common-card" onclick="location.href='members.html#mechanical'">
+    <div class="grid-5">
+        <div class="common-card">
             <h3 class="card-title">机械组</h3>
             <p class="card-desc">结构设计、传动机构、装配与机械调试</p>
             <div class="tag-group">
@@ -120,7 +120,7 @@
                 <span class="tag">装配调试</span>
             </div>
         </div>
-        <div class="common-card" onclick="location.href='members.html#control'">
+        <div class="common-card">
             <h3 class="card-title">电控组</h3>
             <p class="card-desc">嵌入式开发、运动控制、设备通信调试</p>
             <div class="tag-group">
@@ -128,7 +128,7 @@
                 <span class="tag">运动控制</span>
             </div>
         </div>
-        <div class="common-card" onclick="location.href='members.html#algorithm'">
+        <div class="common-card">
             <h3 class="card-title">算法组</h3>
             <p class="card-desc">视觉识别、目标追踪、自动瞄准算法</p>
             <div class="tag-group">
@@ -136,7 +136,7 @@
                 <span class="tag">智能算法</span>
             </div>
         </div>
-        <div class="common-card" onclick="location.href='members.html#hardware'">
+        <div class="common-card">
             <h3 class="card-title">硬件组</h3>
             <p class="card-desc">电路设计、PCB绘制、硬件焊接检修</p>
             <div class="tag-group">
@@ -144,7 +144,7 @@
                 <span class="tag">故障排查</span>
             </div>
         </div>
-        <div class="common-card" onclick="location.href='members.html#operation'">
+        <div class="common-card">
             <h3 class="card-title">运营组</h3>
             <p class="card-desc">赛事对接、宣传招新、后勤统筹管理</p>
             <div class="tag-group">
@@ -155,21 +155,24 @@
     </div>
 </section>
 
+<!-- 媒体素材 -->
 <section id="media">
-    <div class="section-head">
+    <div class="section-title-row">
         <h2 class="section-title">媒体素材</h2>
-        <a href="#" class="more-link">更多内容 →</a>
+        <a href="#" class="section-more">更多内容 →</a>
     </div>
 </section>
 
+<!-- 赛事荣誉 -->
 <section id="honor">
-    <div class="section-head">
+    <div class="section-title-row">
         <h2 class="section-title">赛事荣誉</h2>
     </div>
 </section>
 
+<!-- 联系我们 -->
 <section id="contact">
-    <div class="section-head">
+    <div class="section-title-row">
         <h2 class="section-title">联系我们</h2>
     </div>
     <div class="common-card">
@@ -184,8 +187,7 @@
 </section>
 
 <footer>
-    <p>© 2026 群星战队 | 桂林理工大学机器人实践基地 版权所有</p>
+    © 2026 群星战队 | 桂林理工大学机器人实践基地 版权所有
 </footer>
-
 </body>
 </html>
